@@ -1,0 +1,33 @@
+server:
+  port: 8902
+spring:
+  application:
+    name: consumer-demo
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  data:
+    redis:
+      repositories:
+        enabled: true
+    jpa:
+      repositories:
+        enabled: false
+  datasource:
+    url: jdbc:mysql://192.168.3.101:3306/aemon?useSSL=false
+    username: test
+    password: test
+  redis:
+    database: 0
+    host: 192.168.3.106
+    # password:
+    port: 6379
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+    prefer-ip-address: true
