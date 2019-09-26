@@ -25,6 +25,10 @@ spring:
     host: 192.168.3.106
     # password:
     port: 6379
+  rabbitmq:
+    username: guest
+    host: 192.168.3.104
+    password: guest
 eureka:
   client:
     serviceUrl:
